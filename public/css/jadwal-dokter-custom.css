@@ -1,0 +1,630 @@
+/* ========================================
+   CUSTOM CSS - FITUR BUAT JANJI
+   File: public/css/jadwal-dokter-custom.css
+   ======================================== */
+
+/* ===== LAYOUT UTAMA ===== */
+.jadwal-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR BUAT JANJI ===== */
+.sidebar-janji {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.btn-reset {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    color: #0099ff;
+    transform: rotate(180deg);
+}
+
+/* ===== FORM STYLING ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.form-label .required {
+    color: #ff4444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0099ff;
+    box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.1);
+}
+
+.form-control:hover {
+    border-color: #c0c0c0;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 35px;
+}
+
+.form-textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 100px;
+}
+
+.form-help {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 11px;
+}
+
+.form-link {
+    color: #0099ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== INFO DOKTER ===== */
+.info-dokter {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.info-dokter.show {
+    display: block;
+}
+
+.info-spesialisasi {
+    color: #0099ff;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.info-departemen {
+    color: #666;
+}
+
+/* ===== INFO ANTRIAN ===== */
+.info-antrian {
+    display: none;
+    margin-top: 5px;
+    color: #0099ff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.info-antrian.show {
+    display: block;
+}
+
+/* ===== TOMBOL ===== */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+}
+
+.info-box-title {
+    font-size: 12px;
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.info-box-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 11px;
+    color: #856404;
+    line-height: 1.6;
+}
+
+/* ===== STATISTIK ===== */
+.stats-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+}
+
+.stats-title {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.stat-number.primary {
+    color: #0099ff;
+}
+
+.stat-number.success {
+    color: #10b981;
+}
+
+.stat-label {
+    font-size: 10px;
+    color: #666;
+}
+
+/* ===== KONTEN UTAMA ===== */
+.main-content {
+    flex: 1;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.btn-back {
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* ===== MONTH NAVIGATION ===== */
+.month-nav {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-filter {
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: #0088ee;
+}
+
+.current-month {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* ===== CALENDAR ===== */
+.calendar-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #0099ff;
+    color: white;
+}
+
+.calendar-day-name {
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-cell {
+    padding: 15px;
+    border: 1px solid #eee;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calendar-cell.empty {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+.calendar-cell.today {
+    background-color: #d4edda;
+}
+
+.calendar-cell.past {
+    background-color: #f9f9f9;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.calendar-cell:not(.empty):not(.past):hover {
+    background-color: #e3f2fd;
+}
+
+.calendar-date {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+
+.calendar-date.today {
+    color: #10b981;
+}
+
+.calendar-info {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.calendar-info.has-registration {
+    color: #0099ff;
+    font-weight: 600;
+}
+
+.calendar-info.available {
+    color: #999;
+}
+
+.calendar-action {
+    margin-top: auto;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.calendar-action.active {
+    color: #0099ff;
+}
+
+.calendar-action.past {
+    color: #999;
+}
+
+/* ===== DOKTER LIST ===== */
+.dokter-section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+.dokter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dokter-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.dokter-card:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dokter-avatar {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.dokter-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.dokter-spesialisasi {
+    font-size: 13px;
+    color: #0099ff;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.dokter-departemen {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 15px 0;
+}
+
+.dokter-btn {
+    display: inline-block;
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* ===== NOTIFIKASI ===== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification.success {
+    background: #10b981;
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.notification.error {
+    background: #ef4444;
+    color: white;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .jadwal-container {
+        flex-direction: column;
+    }
+    
+    .sidebar-janji {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .month-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .filter-select,
+    .btn-filter {
+        width: 100%;
+    }
+    
+    .dokter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-header,
+    .calendar-grid {
+        font-size: 12px;
+    }
+    
+    .calendar-cell {
+        padding: 8px;
+        min-height: 80px;
+    }
+    
+    .calendar-date {
+        font-size: 14px;
+    }
+    
+    .calendar-info,
+    .calendar-action {
+        font-size: 10px;
+    }
+}
+
+/* ===== UTILITIES ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
